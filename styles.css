@@ -1,0 +1,45 @@
+body {
+  background-color: #f5f3ee;
+  font-family: 'Georgia', serif;
+  margin: 0;
+  padding: 0;
+  color: #7b3f00;
+}
+
+.container {
+  max-width: 800px;
+  margin: 80px auto;
+  padding: 0 20px;
+  line-height: 1.6;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: #4b2c20;
+}
+
+.highlight-green {
+  color: #5b7553;
+}
+
+.highlight-orange {
+  color: #cc6a2f;
+}
+
+.main-text {
+  font-size: 1.3rem;
+  margin-top: 2rem;
+  color: #cc6a2f;
+}
+
+.footer {
+  font-size: 1.5rem;
+  margin-top: 4rem;
+  color: #cc6a2f;
+}
+
+.emoji {
+  font-size: 1.5rem;
+  color: #6c757d;
+}
