@@ -1,29 +1,32 @@
 body {
   background-color: #F1EFEB;
-  font-family:'Gentium Basic', serif;
-  font-size:  3rem;
-  color: #C66828;
+  font-family:'Gentium Plus', serif;
+  font-size:  2.5em;
+  font-kerning: auto;
+  font-optical-sizing: auto;
+  color: #C4661F;
   margin: 0;
   padding: 0;
 }
 
 .container {
   max-width: 100vw;
-  margin: 80px auto;
-  padding: 0 20px;
-  line-height: 1.6;
+  margin: 7% 25% auto;
+  line-height: 1.4;
 }
 
-h1 {
-  color: #783E19;
+.highlight-brown {
+  color: #783D19;
 }
 
-.highlight-green {
-  color: #5E7153;
+a {
+  color: #5F6F52;
+  text-decoration: none;
 }
 
-.highlight-orange {
-  color: #cc6a2f;
+a:hover {
+  color: #A9B388;
+  text-decoration: strikethrough;
 }
 
 .emoji {
