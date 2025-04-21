@@ -1,8 +1,7 @@
-/* Base styles */
 body {
   background-color: #F1EFEB;
-  font-family: 'Gentium Plus', serif;
-  font-size: 2.5em;
+  font-family:'Gentium Plus', serif;
+  font-size:  2.5em;
   font-kerning: auto;
   font-optical-sizing: auto;
   color: #C4661F;
@@ -34,48 +33,4 @@ a:hover {
 .emoji {
   font-size: 1.5rem;
   color: #87949D;
-}
-
-/* Medium and smaller devices (≤768px) */
-@media only screen and (max-width: 768px) {
-  body {
-    font-size: 1.2em;
-    padding: 10px;
-  } 
-
-  .container {
-    margin: 5% 5% auto;
-    max-width: 100%;
-    max-height: auto;
-    line-height: 1.6;
-  }
-
-  .emoji {
-    font-size: 1.2rem;
-  }
-
-  a:hover {
-    text-decoration: underline;
-  }
-}
-
-/* Extra small devices (≤480px) */
-@media only screen and (max-width: 480px) {
-  body {
-    font-size: 1em;
-    padding: 8px;
-  }
-
-  .container {
-    margin: 4% 3% auto;
-    line-height: 1.7;
-  }
-
-  .emoji {
-    font-size: 1rem;
-  }
-
-  a {
-    font-size: 1em;
-  }
 }
