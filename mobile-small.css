@@ -1,0 +1,27 @@
+/* mobile-small.css */
+
+/* Extra small device styles for screen widths up to 480px */
+@media only screen and (max-width: 480px) {
+  body {
+    font-size: 1em;
+    padding: 8px;
+  }
+
+  .container {
+    margin: 4% 3% auto;
+    max-width: 100%;
+    line-height: 1.7;
+  }
+
+  .emoji {
+    font-size: 1rem;
+  }
+
+  a {
+    font-size: 1em;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+}
