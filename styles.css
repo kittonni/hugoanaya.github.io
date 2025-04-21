@@ -1,6 +1,8 @@
 body {
   background-color: #F1EFEB;
-  font: 3em #C66828 'Gentium Basic', serif;
+  font-family:'Gentium Basic', serif;
+  font-size:  3em;
+  color: #C66828;
   margin: 0;
   padding: 0;
 }
