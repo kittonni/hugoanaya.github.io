@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 545.28 775.45">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fae700;
+        opacity: .26;
+      }
+
+      .cls-2 {
+        fill: #69cad9;
+        opacity: .12;
+      }
+
+      .cls-3 {
+        fill: #f8bc16;
+      }
+
+      .cls-3, .cls-4 {
+        opacity: .6;
+      }
+
+      .cls-5 {
+        fill: #2f53a4;
+        opacity: .55;
+      }
+
+      .cls-6 {
+        fill: #3d87c8;
+      }
+
+      .cls-6, .cls-7, .cls-8 {
+        opacity: .94;
+      }
+
+      .cls-9 {
+        fill: #ea7b24;
+      }
+
+      .cls-9, .cls-10 {
+        opacity: .15;
+      }
+
+      .cls-11 {
+        fill: #eb7a23;
+        opacity: .38;
+      }
+
+      .cls-7 {
+        fill: #3f246a;
+      }
+
+      .cls-8 {
+        fill: #a82e23;
+      }
+
+      .cls-12 {
+        fill: #3075bb;
+        opacity: .14;
+      }
+
+      .cls-10 {
+        fill: #42190d;
+      }
+
+      .cls-13 {
+        fill: #100e22;
+        opacity: .35;
+      }
+
+      .cls-14 {
+        fill: #a74324;
+        opacity: .77;
+      }
+
+      .cls-15 {
+        fill: #2d7ec2;
+      }
+
+      .cls-15, .cls-16 {
+        opacity: .31;
+      }
+
+      .cls-17 {
+        fill: #ea7d23;
+        opacity: .99;
+      }
+
+      .cls-18 {
+        fill: #f7e300;
+        opacity: .46;
+      }
+
+      .cls-19 {
+        fill: #463113;
+        opacity: .24;
+      }
+
+      .cls-16 {
+        fill: #64cadf;
+      }
+
+      .cls-4 {
+        fill: #33bdee;
+      }
+
+      .cls-20 {
+        fill: #e8e621;
+        opacity: .11;
+      }
+
+      .cls-21 {
+        fill: #879f3c;
+        opacity: .62;
+      }
+
+      .cls-22 {
+        fill: #2c1b5a;
+        opacity: .63;
+      }
+    </style>
+  </defs>
+  <g id="Layer_1-2" data-name="Layer 1">
+    <g>
+      <path class="cls-16" d="M347,329.3h49.57v49.57h-49.57v-49.57ZM297.43,428.44h49.57v49.57h-49.57v-49.57Z"/>
+      <rect class="cls-10" x="347" y="131.01" width="49.57" height="49.57"/>
+      <rect class="cls-21" x="396.58" y="180.58" width="49.57" height="49.57"/>
+      <path class="cls-22" d="M148.72,180.58h198.29v49.57h-198.29v-49.57ZM297.43,279.73h99.14v49.57h-99.14v-49.57Z"/>
+      <rect class="cls-14" x="148.72" y="527.59" width="49.57" height="49.57"/>
+      <rect x="446.15" y="180.58" width="49.57" height="49.57"/>
+      <rect class="cls-18" x="247.86" y="329.3" width="49.57" height="49.57"/>
+      <rect class="cls-5" x="446.15" y="131.01" width="49.57" height="49.57"/>
+      <path class="cls-3" d="M49.57,180.58h49.57v49.57h-49.57v-49.57ZM198.29,428.44h49.57v49.57h-49.57v-49.57Z"/>
+      <rect class="cls-1" x="148.72" y="478.02" width="49.57" height="49.57"/>
+      <path class="cls-11" d="M99.14,230.16h49.57v49.57h-49.57v-49.57ZM347,230.16h49.57v49.57h-49.57v-49.57ZM99.14,527.59h49.57v49.57h-49.57v-49.57Z"/>
+      <path class="cls-19" d="M396.58,131.01h49.57v49.57h-49.57v-49.57ZM99.14,577.16h49.57v49.57h-49.57v-49.57Z"/>
+      <rect class="cls-9" x="49.57" y="131.01" width="49.57" height="49.57"/>
+      <path class="cls-4" d="M247.86,478.02h49.57v49.57h-49.57v-49.57ZM198.29,527.59h49.57v49.57h-49.57v-49.57Z"/>
+      <path class="cls-7" d="M297.43,329.3h49.57v49.57h-49.57v-49.57ZM247.86,428.44h49.57v49.57h-49.57v-49.57Z"/>
+      <path class="cls-15" d="M148.72,230.16h49.57v49.57h-49.57v-49.57ZM396.58,279.73h49.57v49.57h-49.57v-49.57Z"/>
+      <rect class="cls-12" x="99.14" y="131.01" width="49.57" height="49.57"/>
+      <path class="cls-17" d="M247.86,279.73h49.57v49.57h-49.57v-49.57ZM247.86,378.87h49.57v49.57h-49.57v-49.57Z"/>
+      <path class="cls-6" d="M495.72,180.58h49.57v49.57h-49.57v-49.57ZM446.15,230.16h49.57v49.57h-49.57v-49.57ZM297.43,378.87h49.57v49.57h-49.57v-49.57Z"/>
+      <rect class="cls-13" x="347" y="180.58" width="49.57" height="49.57"/>
+      <path class="cls-2" d="M495.72,131.01h49.57v49.57h-49.57v-49.57ZM495.72,230.16h49.57v49.57h-49.57v-49.57ZM148.72,577.16h49.57v49.57h-49.57v-49.57Z"/>
+      <path class="cls-20" d="M297.43,131.01h49.57v49.57h-49.57v-49.57ZM198.29,279.73h49.57v49.57h-49.57v-49.57Z"/>
+      <path class="cls-8" d="M99.14,180.58h49.57v49.57h-49.57v-49.57ZM396.58,230.16h49.57v49.57h-49.57v-49.57ZM198.29,478.02h49.57v49.57h-49.57v-49.57Z"/>
+    </g>
+  </g>
+</svg>
