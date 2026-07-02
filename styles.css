@@ -7,12 +7,17 @@
   font-style: normal;
   }
 
+@font-face {
+  font-family: GeistPixel;
+  src:url(GeistPixel-Square.woff2);
+}
+
 
 /* Base styles */
 body {
   background-color: #FFF;
   font-family: 'Source Serif 4', serif;
-  font-weight: light;
+  font-weight: 300;
   font-size: 2.5em;
   font-kerning: auto;
   font-optical-sizing: auto;
@@ -34,7 +39,8 @@ a {
 }
 
 .highlight-brown {
-  color: #783D19;
+  color: #bf7c2a;
+  font-family: 'GeistPixel', display;
 }
 
 a {
@@ -43,8 +49,7 @@ a {
 }
 
 a:hover {
-  color: #A9B388;
-  text-decoration: strikethrough;
+  color: #aab7bf;
 }
 
 .emoji {
