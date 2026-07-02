@@ -10,13 +10,13 @@
 
 /* Base styles */
 body {
-  background-color: #F1EFEB;
+  background-color: #FFF;
   font-family: 'Source Serif 4', serif;
   font-weight: light;
   font-size: 2.5em;
   font-kerning: auto;
   font-optical-sizing: auto;
-  color: #FFF;
+  color: #000;
   margin: 0;
   padding: 0;
   cursor: url("cursor.svg") 16 16, default;
