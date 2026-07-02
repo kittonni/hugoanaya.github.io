@@ -27,10 +27,6 @@ body {
   cursor: url("cursor.svg") 16 16, default;
 }
 
-a {
-  cursor: url("cursorhover.svg") 16 16, pointer;
-}
-
 .container {
   max-width: 100vw;
   max-height: 100vh;
@@ -44,6 +40,7 @@ a {
 }
 
 a {
+  cursor: url("cursorhover.svg") 16 16, pointer;
   color: #FF7900;
   text-decoration: none;
 }
