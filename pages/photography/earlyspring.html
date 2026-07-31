@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>hugo anaya – Photography – early spring</title>
+<style>
+  :root {
+    --gap: 16px;
+    --row-height: 8px; /* fine-grained unit; JS computes each item's grid-row span from this */
+  }
+
+  * { box-sizing: border-box; }
+
+  @import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap');
+
+ .source-serif-4-<uniquifier> {
+    font-family: "Source Serif 4", serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+  }
+
+  body {
+    font-family: "Source Serif 4", serif;
+    font-size: 1em;
+    font-weight: 300;
+    width: 100vw;
+    height: 100vh;
+    background: #FFFFFF;
+    cursor: url("../../assets/cursor.svg") 16 16, default;
+    overflow: hidden;
+  }
+
+  a {
+    cursor: url("../../assets/cursorhover.svg") 16 16, pointer;
+  }
+
+  h1 { font-size: 1.4rem; font-weight: 600; margin: 0 0 8px; max-width: 1200px; margin-inline: auto; }
+  p.note { max-width: 1200px; margin: 0 auto 24px; font-size: 0.85rem; color: #666; }
+
+  .logo{
+    position: fixed;
+    z-index: 999;
+    right: 2vw;
+    bottom: 5vh;
+    width: 3vw;
+    height: 3vh;
+  }
+
+  .masonry-grid {
+    max-width: 95vw;
+    max-height: 100vh;
+    margin: 0 auto;
+    padding: 15vh 0 2vh;
+    display: grid;
+    overflow: scroll;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: var(--row-height);
+    grid-auto-flow: dense;
+    gap: var(--gap);
+    scrollbar-width: none;
+  }
+
+  .masonry-item {
+    overflow: hidden;
+    position: relative;
+  }
+
+  .masonry-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  /* Pinned elements: NOT touched by the auto-sizing JS.
+     Column position is fixed by design; row position is
+     fixed to sit after roughly two auto-flowed rows. */
+
+  .topbar {
+    width: 100vw;
+    height: 15vh;
+    position: absolute;
+    z-index: 1;
+    background: #fff;
+    font-family: "Geist Pixel Circle";
+    font-size: 4rem;
+    text-transform: uppercase;
+    padding-left: 2.2vw;
+    padding-top: 3vh;
+  }
+
+  .anchor-image {
+    grid-column: 2 / 3;   /* column 2 = 3rd from right in a 4-col grid */
+    grid-row: 21 / 61;
+  }
+  .copy-block {
+    grid-column: 1 / 3;   /* columns 3–4 = 1st & 2nd from right */
+    grid-row: 31 / 41;
+    color: #000;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: right;
+    gap: 12px;
+  }
+  .copy-block h2 { margin: 0; font-size: 1.3rem; font-weight: 600; }
+  .copy-block p { margin: 0; font-size: 1.2rem; line-height: 1.5; color: #000; }
+
+  @media (max-width: 900px) {
+    .masonry-grid { grid-template-columns: repeat(2, 1fr); }
+    .anchor-image, .copy-block { grid-column: auto; grid-row: auto; }
+    .copy-block { grid-column: span 2; }
+  }
+  @media (max-width: 560px) {
+    .masonry-grid { grid-template-columns: 1fr; }
+    .anchor-image { grid-column: auto; grid-row: auto; }
+    .copy-block { grid-column: auto; grid-row: auto; }
+  }
+</style>
+</head>
+<body>
+
+  <div class="topbar">early spring</div>
+
+  <div class="logo">
+    <a href="../../main.html"><img src="../../assets/logo.svg"></a>
+  </div>
+  
+  <div class="masonry-grid" id="gallery">
+    <div class="masonry-item auto-size"><img loading="lazy" loading="lazy" src="assets/earlyspring/earlyspring-1.jpg" alt=""></div>
+    <div class="masonry-item auto-size"><img loading="lazy" loading="lazy" src="assets/earlyspring/earlyspring-12.jpg" alt=""></div>
+    <div class="masonry-item auto-size"><img loading="lazy" loading="lazy" src="assets/earlyspring/earlyspring-2.jpg" alt=""></div>
+    <div class="masonry-item auto-size"><img loading="lazy" loading="lazy" src="assets/earlyspring/earlyspring-18.jpg" alt=""></div>
+    <div class="masonry-item auto-size"><img loading="lazy" loading="lazy" src="assets/earlyspring/earlyspring-5.jpg" alt=""></div>
+    <div class="masonry-item auto-size"><img loading="lazy" loading="lazy" src="assets/earlyspring/earlyspring-6.jpg" alt=""></div>
+    <div class="masonry-item auto-size"><img loading="lazy" loading="lazy" src="assets/earlyspring/earlyspring-3.jpg" alt=""></div>
+    <div class="masonry-item auto-size"><img loading="lazy" loading="lazy" src="assets/earlyspring/earlyspring-4.jpg" alt=""></div>
+    <div class="masonry-item auto-size"><img loading="lazy" loading="lazy" src="assets/earlyspring/earlyspring-11.jpg" alt=""></div>
+    <div class="masonry-item auto-size"><img loading="lazy" loading="lazy" src="assets/earlyspring/earlyspring-13.jpg" alt=""></div>
+    <div class="masonry-item auto-size"><img loading="lazy" loading="lazy" src="assets/earlyspring/earlyspring-17.jpg" alt=""></div>
+    <div class="masonry-item auto-size"><img loading="lazy" loading="lazy" src="assets/earlyspring/earlyspring-16.jpg" alt=""></div>
+    <div class="masonry-item auto-size"><img loading="lazy" loading="lazy" src="assets/earlyspring/earlyspring-19.jpg" alt=""></div>
+    <div class="masonry-item auto-size"><img loading="lazy" loading="lazy" src="assets/earlyspring/earlyspring-20.jpg" alt=""></div>
+    <div class="masonry-item auto-size"><img loading="lazy" loading="lazy" src="assets/earlyspring/earlyspring-14.jpg" alt=""></div>
+    <div class="masonry-item auto-size"><img loading="lazy" loading="lazy" src="assets/earlyspring/earlyspring-10.jpg" alt=""></div>
+    <div class="masonry-item auto-size"><img loading="lazy" loading="lazy" src="assets/earlyspring/earlyspring-8.jpg" alt=""></div>
+    <!--<div class="masonry-item copy-block">
+      <p>Spring in Japan is a synonym of change; new jobs, new classmates, new blossoms.
+      <br>
+      This season of beginnings, it slowly, steadily, sets in.
+      <br>
+      <br>
+      These are but fragments of this transitory period,
+      burned within a negative,
+      <br>
+      still within a fraction of a second.</p>
+    </div>-->
+  </div>
+
+<script>
+(function () {
+  const TARGET_LONG_EDGE = 700; // design-scale px every image's long edge is normalized toward
+  const grid = document.getElementById('gallery');
+
+  function getColumnCount() {
+    return getComputedStyle(grid).gridTemplateColumns.split(' ').length;
+  }
+
+  function layout() {
+    const cols = getColumnCount();
+    const gapPx = parseFloat(getComputedStyle(grid).columnGap) || 16;
+    const rowUnit = parseFloat(getComputedStyle(grid).gridAutoRows) || 8;
+    const gridWidth = grid.getBoundingClientRect().width;
+    const colWidth = (gridWidth - gapPx * (cols - 1)) / cols;
+    const maxColSpan = Math.min(cols, 3);
+
+    grid.querySelectorAll('.auto-size').forEach(item => {
+      const img = item.querySelector('img');
+      if (!img || !img.naturalWidth) return;
+
+      const ratio = img.naturalWidth / img.naturalHeight;
+      let colSpan, rowSpan;
+
+      if (ratio > 1.05) {
+        // landscape: long edge is WIDTH — normalize width to the target,
+        // always spans 2+ columns so it reads as clearly horizontal.
+        colSpan = Math.round((TARGET_LONG_EDGE + gapPx) / (colWidth + gapPx));
+        colSpan = Math.max(2, Math.min(maxColSpan, colSpan));
+
+        const renderedWidth = colSpan * colWidth + (colSpan - 1) * gapPx;
+        const renderedHeight = renderedWidth / ratio;
+        rowSpan = Math.max(1, Math.round((renderedHeight + gapPx) / (rowUnit + gapPx)));
+
+      } else if (ratio < 0.95) {
+        // portrait: spans 2 columns, height derived from TRUE aspect ratio
+        // at the actual rendered width so proportions are preserved.
+        colSpan = 2;
+        const renderedWidth = colSpan * colWidth + (colSpan - 1) * gapPx;
+        const renderedHeight = renderedWidth / ratio;
+        rowSpan = Math.max(1, Math.round((renderedHeight + gapPx) / (rowUnit + gapPx)));
+
+      } else {
+        // near-square
+        colSpan = 1;
+        rowSpan = Math.max(1, Math.round((colWidth + gapPx) / (rowUnit + gapPx)));
+      }
+
+      item.style.gridColumn = `span ${colSpan}`;
+      item.style.gridRow = `span ${rowSpan}`;
+    });
+  }
+
+  function whenImagesReady(callback) {
+    const imgs = Array.from(grid.querySelectorAll('img'));
+    let remaining = imgs.length;
+    if (remaining === 0) return callback();
+    imgs.forEach(img => {
+      if (img.complete && img.naturalWidth) {
+        if (--remaining === 0) callback();
+      } else {
+        img.addEventListener('load', () => { if (--remaining === 0) callback(); });
+        img.addEventListener('error', () => { if (--remaining === 0) callback(); });
+      }
+    });
+  }
+
+  let resizeTimer;
+  window.addEventListener('resize', () => {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(layout, 150);
+  });
+
+  whenImagesReady(layout);
+})();
+</script>
+
+</body>
+</html>

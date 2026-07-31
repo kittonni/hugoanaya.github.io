@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>hugo anaya – About</title>
+<style>
+
+  @import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap');
+
+ .source-serif-4-<uniquifier> {
+    font-family: "Source Serif 4", serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+  }
+
+  body {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0 auto;
+    background: #FFF;
+    cursor: url("../assets/cursor.svg") 16 16, default;
+
+  a {
+    cursor: url("../assets/cursorhover.svg") 16 16, pointer;
+  }
+
+
+  .logo{
+    position: fixed;
+    z-index: 999;
+    right: 2vw;
+    bottom: 5vh;
+    width: 3vw;
+    height: 3vh;
+  }
+
+  .topbar {
+    width: 70vw;
+    height: 15vh;
+    position: absolute;
+    background: #fff;
+    font-family: "Geist Pixel Circle";
+    font-size: 5rem;
+    text-transform: uppercase;
+    padding-left: 5vw;
+    padding-top: 3vh;
+  }
+
+  .anchorimage {
+    max-height: 100vh;
+    max-width: 45vw;
+    height: 100vh;
+    position: absolute;
+    overflow: hidden;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    opacity: .8;
+  }
+
+  .setmenu {
+    font-family: "Geist Pixel Square", serif;
+    font-size: 2rem;
+    color: #000;
+    text-transform: uppercase;
+    line-height: 3.5rem;
+    kerning: optical;
+    position: absolute;
+    overflow: hidden;
+    left: 2vw;
+    bottom: 5vh;
+    text-align: left;
+  }
+
+  .setmenu a {
+    transition: .1s ease-in-out all;
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .setmenu a:hover {
+    transition: .1s ease-in-out all;
+    color: #FF7900;
+    text-decoration: none;
+  }
+
+
+  .projects {
+    font-family: "Source Serif 4", serif;
+    font-weight: 50;
+    font-size: 2.8rem;
+    color: #7D7D7D;
+    line-height: 5rem;
+    kerning: optical;
+    position: absolute;
+    overflow: hidden;
+    right: 50vw;
+    top: 35vh;
+    text-align: right;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .4s linear, visibility .4s linear;
+  }
+
+  .projects.is-visible {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .projects a {
+    transition: .2s ease-in-out all;
+    color: inherit;
+    text-decoration: none;
+    list-style: none;
+  }
+
+  .projects a:hover {
+    transition: .2s ease-in-out all;
+    font-weight: 50;
+    color: #FF7900;
+  }
+
+</style>
+</head>
+<body>
+
+  <div class="topbar">About</div>
+
+  <div class="logo">
+    <a href="../../main.html"><img src="../../assets/logo.svg"></a>
+  </div>
+
+  
+
+</body>
+</html>

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>hugo anaya – Photography – tokyo log</title>
+<style>
+  :root {
+    --gap: 16px;
+    --row-height: 8px; /* fine-grained unit; JS computes each item's grid-row span from this */
+  }
+
+  * { box-sizing: border-box; }
+
+  @import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap');
+
+ .source-serif-4-<uniquifier> {
+    font-family: "Source Serif 4", serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+  }
+
+  body {
+    font-family: "Source Serif 4", serif;
+    font-size: 1em;
+    font-weight: 300;
+    font-kerning: auto;
+    width: 100vw;
+    height: 100vh;
+    background: #FFFFFF;
+    cursor: url("../../assets/cursor.svg") 16 16, default;
+    overflow: hidden;
+  }
+
+  a {
+    cursor: url("../../assets/cursorhover.svg") 16 16, pointer;
+  }
+
+  h1 { font-size: 1.4rem; font-weight: 600; margin: 0 0 8px; max-width: 1200px; margin-inline: auto; }
+  p.note { max-width: 1200px; margin: 0 auto 24px; font-size: 0.85rem; color: #666; }
+  
+  .logo{
+    position: fixed;
+    z-index: 999;
+    right: 2vw;
+    bottom: 5vh;
+    width: 3vw;
+    height: 3vh;
+  }
+
+  .masonry-grid {
+    max-width: 95vw;
+    max-height: 100vh;
+    margin: 0 auto;
+    padding: 15vh 0 2vh;
+    display: grid;
+    overflow: scroll;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: var(--row-height);
+    grid-auto-flow: dense;
+    gap: var(--gap);
+    scrollbar-width: none;
+  }
+
+  .masonry-item {
+    overflow: hidden;
+    position: relative;
+  }
+
+  .masonry-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  /* Pinned elements: NOT touched by the auto-sizing JS.
+     Column position is fixed by design; row position is
+     fixed to sit after roughly two auto-flowed rows. */
+
+  .topbar {
+    width: 100vw;
+    height: 15vh;
+    position: absolute;
+    z-index: 1;
+    background: #fff;
+    font-family: "Geist Pixel Circle";
+    font-size: 4rem;
+    text-transform: uppercase;
+    padding-left: 2.2vw;
+    padding-top: 3vh;
+  }
+
+  .anchor-image {
+    grid-column: 2 / 3;   /* column 2 = 3rd from right in a 4-col grid */
+    grid-row: 21 / 61;
+  }
+  .copy-block {
+    grid-column: 1 / 3;   /* columns 3–4 = 1st & 2nd from right */
+    grid-row: 31 / 41;
+    color: #000;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 12px;
+    overflow: visible;
+    margin-bottom: 17%;
+  }
+
+  .copy-block p { margin: 0; font-size: 1.1rem; line-height: 1.5; color: #000; }
+
+  @media (max-width: 900px) {
+    .masonry-grid { grid-template-columns: repeat(2, 1fr); }
+    .anchor-image, .copy-block { grid-column: auto; grid-row: auto; }
+    .copy-block { grid-column: span 2; }
+  }
+  @media (max-width: 560px) {
+    .masonry-grid { grid-template-columns: 1fr; }
+    .anchor-image { grid-column: auto; grid-row: auto; }
+    .copy-block { grid-column: auto; grid-row: auto; }
+  }
+</style>
+</head>
+<body>
+
+  <div class="topbar">tokyo log</div>
+
+  <div class="logo">
+    <a href="../../main.html"><img src="../../assets/logo.svg"></a>
+  </div>
+  
+  <div class="masonry-grid" id="gallery">
+    
+    <div class="masonry-item auto-size"><img loading="lazy" src="assets/tokyolog/tokyolog-9.JPG" alt=""></div>
+    <div class="masonry-item auto-size"><img loading="lazy" src="assets/tokyolog/tokyolog-7.JPG" alt=""></div>
+    <div class="masonry-item auto-size"><img loading="lazy" src="assets/tokyolog/tokyolog-11.JPG" alt=""></div>
+    <div class="masonry-item auto-size"><img loading="lazy" src="assets/tokyolog/tokyolog-12.JPG" alt=""></div>
+    <div class="masonry-item auto-size"><img loading="lazy" src="assets/tokyolog/tokyolog-14.JPG" alt=""></div>
+    <div class="masonry-item auto-size"><img loading="lazy" src="assets/tokyolog/tokyolog-15.JPG" alt=""></div>
+    <div class="masonry-item auto-size"><img loading="lazy" src="assets/tokyolog/tokyolog-16.JPG" alt=""></div>
+    <div class="masonry-item auto-size"><img loading="lazy" src="assets/tokyolog/tokyolog-17.JPG" alt=""></div>
+    <div class="masonry-item auto-size"><img loading="lazy" src="assets/tokyolog/tokyolog-13.JPG" alt=""></div>
+    <div class="masonry-item auto-size"><img loading="lazy" src="assets/tokyolog/tokyolog-10.JPG" alt=""></div>
+    <div class="masonry-item auto-size"><img loading="lazy" src="assets/tokyolog/tokyolog-5.JPG" alt=""></div>
+    <div class="masonry-item auto-size"><img loading="lazy" src="assets/tokyolog/tokyolog-6.JPG" alt=""></div>
+    <div class="masonry-item auto-size"><img loading="lazy" src="assets/tokyolog/tokyolog-4.JPG" alt=""></div>
+    <div class="masonry-item auto-size"><img loading="lazy" src="assets/tokyolog/tokyolog-3.JPG" alt=""></div>
+    <div class="masonry-item auto-size"><img loading="lazy" src="assets/tokyolog/tokyolog-2.JPG" alt=""></div>
+    <div class="masonry-item auto-size"><img loading="lazy" src="assets/tokyolog/tokyolog-8.JPG" alt=""></div>
+    <div class="masonry-item auto-size"><img loading="lazy" src="assets/tokyolog/tokyolog-1.JPG" alt=""></div>
+    <!--<div class="masonry-item copy-block">
+      <p>"Tokyo Log" is a one-month diaristic exploration of a city I had longed to visit for a many a year.
+      <br>
+      <br>
+      On the first day of 2014, I quit my job and took a month-long trip to the city of Tokyo. Staying in a small apartment in Hibarigaoka - a suburb of Tokyo - and taking a 40-minute long train ride to the Ikebukuro neighbourhood every other day, I found myself nearly penniless and walking aimlessly in a city I had dreamt of, camera in hand, ready to press the shutter on all the moments I saw unfolding in front of me.
+      <br>
+      <br>
+      This thirst for capturing the life of a city I had constructed in my head for years, using music and books as my building blocks, lead to a feverishly blur of images that took me almost 2 years to cohesively edit into what I dubbed my "Tokyo Log" — a travelog filed with half-conscious walks, hushed shutter clicks, and hungry days fed by the insatiable need to photograph all that was,   before my time in the city was up.</p>
+    </div>-->
+  </div>
+
+<script>
+(function () {
+  const TARGET_LONG_EDGE = 700; // design-scale px every image's long edge is normalized toward
+  const grid = document.getElementById('gallery');
+
+  function getColumnCount() {
+    return getComputedStyle(grid).gridTemplateColumns.split(' ').length;
+  }
+
+  function layout() {
+    const cols = getColumnCount();
+    const gapPx = parseFloat(getComputedStyle(grid).columnGap) || 16;
+    const rowUnit = parseFloat(getComputedStyle(grid).gridAutoRows) || 8;
+    const gridWidth = grid.getBoundingClientRect().width;
+    const colWidth = (gridWidth - gapPx * (cols - 1)) / cols;
+    const maxColSpan = Math.min(cols, 3);
+
+    grid.querySelectorAll('.auto-size').forEach(item => {
+      const img = item.querySelector('img');
+      if (!img || !img.naturalWidth) return;
+
+      const ratio = img.naturalWidth / img.naturalHeight;
+      let colSpan, rowSpan;
+
+      if (ratio > 1.05) {
+        // landscape: long edge is WIDTH — normalize width to the target,
+        // always spans 2+ columns so it reads as clearly horizontal.
+        colSpan = Math.round((TARGET_LONG_EDGE + gapPx) / (colWidth + gapPx));
+        colSpan = Math.max(2, Math.min(maxColSpan, colSpan));
+
+        const renderedWidth = colSpan * colWidth + (colSpan - 1) * gapPx;
+        const renderedHeight = renderedWidth / ratio;
+        rowSpan = Math.max(1, Math.round((renderedHeight + gapPx) / (rowUnit + gapPx)));
+
+      } else if (ratio < 0.95) {
+        // portrait: spans 2 columns, height derived from TRUE aspect ratio
+        // at the actual rendered width so proportions are preserved.
+        colSpan = 2;
+        const renderedWidth = colSpan * colWidth + (colSpan - 1) * gapPx;
+        const renderedHeight = renderedWidth / ratio;
+        rowSpan = Math.max(1, Math.round((renderedHeight + gapPx) / (rowUnit + gapPx)));
+
+      } else {
+        // near-square
+        colSpan = 1;
+        rowSpan = Math.max(1, Math.round((colWidth + gapPx) / (rowUnit + gapPx)));
+      }
+
+      item.style.gridColumn = `span ${colSpan}`;
+      item.style.gridRow = `span ${rowSpan}`;
+    });
+  }
+
+  function whenImagesReady(callback) {
+    const imgs = Array.from(grid.querySelectorAll('img'));
+    let remaining = imgs.length;
+    if (remaining === 0) return callback();
+    imgs.forEach(img => {
+      if (img.complete && img.naturalWidth) {
+        if (--remaining === 0) callback();
+      } else {
+        img.addEventListener('load', () => { if (--remaining === 0) callback(); });
+        img.addEventListener('error', () => { if (--remaining === 0) callback(); });
+      }
+    });
+  }
+
+  let resizeTimer;
+  window.addEventListener('resize', () => {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(layout, 150);
+  });
+
+  whenImagesReady(layout);
+})();
+</script>
+
+</body>
+</html>
