@@ -101,6 +101,38 @@
         top: 60%;
         left: 46.9%;
     }
+
+    @media (max-width: 900px) {
+        :root {
+            --font-size: 62px;
+        }
+        .nameMain {
+            font-size: 2.6em;
+            top: 62%;
+            left: 33%;
+        }
+        .logoMain {
+            width: 28px;
+            top: 58%;
+            left: 44%;
+        }
+    }
+
+    @media (max-width: 560px) {
+        :root {
+            --font-size: 46px;
+        }
+        .nameMain {
+            font-size: 1.8em;
+            top: 60%;
+            left: 28%;
+        }
+        .logoMain {
+            width: 22px;
+            top: 56%;
+            left: 43%;
+        }
+    }
 </style>
 
 </head>
@@ -192,6 +224,33 @@
                 velocity += e.deltaY * 0.0018;
 
             }, { passive: false });
+
+            // Touch (mobile / tablet) — swipe to rotate the menu
+            let touchY = null;
+
+            window.addEventListener('touchstart', (e) => {
+
+                touchY = e.touches[0].clientY;
+
+            }, { passive: true });
+
+            window.addEventListener('touchmove', (e) => {
+
+                if (touchY === null) return;
+
+                const currentY = e.touches[0].clientY;
+                const deltaY = touchY - currentY;
+
+                velocity += deltaY * 0.045;
+                touchY = currentY;
+
+            }, { passive: true });
+
+            window.addEventListener('touchend', () => {
+
+                touchY = null;
+
+            }, { passive: true });
 
 
             function animate() {

@@ -122,11 +122,17 @@
     .masonry-grid { grid-template-columns: repeat(2, 1fr); }
     .anchor-image, .copy-block { grid-column: auto; grid-row: auto; }
     .copy-block { grid-column: span 2; }
+    .topbar { font-size: 2.6rem; height: 12vh; padding-top: 2.5vh; }
+    .logo { width: 40px; height: 40px; }
   }
   @media (max-width: 560px) {
-    .masonry-grid { grid-template-columns: 1fr; }
+    .masonry-grid { grid-template-columns: 1fr; padding: 9vh 0 4vh; gap: 10px; }
     .anchor-image { grid-column: auto; grid-row: auto; }
     .copy-block { grid-column: auto; grid-row: auto; }
+    .topbar { font-size: 1.6rem; height: 9vh; padding-left: 5vw; padding-top: 2vh; letter-spacing: -0.01em; }
+    .logo { width: 32px; height: 32px; right: 4vw; bottom: 3vh; }
+    .copy-block h2 { font-size: 1.1rem; }
+    .copy-block p { font-size: 1rem; line-height: 1.4; }
   }
 </style>
 </head>
@@ -203,18 +209,23 @@
 
       if (ratio > 1.05) {
         // landscape: long edge is WIDTH — normalize width to the target,
-        // always spans 2+ columns so it reads as clearly horizontal.
+        // spans 2+ columns so it reads as clearly horizontal, but never
+        // more columns than the grid actually has (avoids overflow when
+        // mobile collapses to a single column).
         colSpan = Math.round((TARGET_LONG_EDGE + gapPx) / (colWidth + gapPx));
-        colSpan = Math.max(2, Math.min(maxColSpan, colSpan));
+        colSpan = maxColSpan >= 2
+          ? Math.max(2, Math.min(maxColSpan, colSpan))
+          : 1;
 
         const renderedWidth = colSpan * colWidth + (colSpan - 1) * gapPx;
         const renderedHeight = renderedWidth / ratio;
         rowSpan = Math.max(1, Math.round((renderedHeight + gapPx) / (rowUnit + gapPx)));
 
       } else if (ratio < 0.95) {
-        // portrait: spans 2 columns, height derived from TRUE aspect ratio
-        // at the actual rendered width so proportions are preserved.
-        colSpan = 2;
+        // portrait: spans 2 columns when available, height derived from
+        // TRUE aspect ratio at the actual rendered width so proportions
+        // are preserved (falls back to 1 column on mobile).
+        colSpan = Math.min(2, maxColSpan);
         const renderedWidth = colSpan * colWidth + (colSpan - 1) * gapPx;
         const renderedHeight = renderedWidth / ratio;
         rowSpan = Math.max(1, Math.round((renderedHeight + gapPx) / (rowUnit + gapPx)));
