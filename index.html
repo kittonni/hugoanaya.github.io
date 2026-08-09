@@ -29,7 +29,7 @@
 
     :root {
         --menu-size: min(85vw, 900px);
-        --font-size: 150px;
+        --font-size: 8.6vw;
     }
 
     /** * {
@@ -84,7 +84,7 @@
 
     .nameMain {
         font-family: "Geist Pixel Square";
-        font-size: 4em;
+        font-size: 3.9vw;
         color: #000;
         position: absolute;
         justify-content: center;
@@ -102,11 +102,9 @@
     }
 
     @media (max-width: 900px) {
-        :root {
-            --font-size: 62px;
-        }
+        
         .nameMain {
-            font-size: 2.6em;
+            font-size: var(--font-size);
             top: 62%;
             left: 33%;
         }
@@ -118,16 +116,14 @@
     }
 
     @media (max-width: 560px) {
-        :root {
-            --font-size: 46px;
-        }
+        
         .nameMain {
-            font-size: 1.8em;
+            font-size: var(--font-size);
             top: 60%;
             left: 28%;
         }
         .logoMain {
-            width: 22px;
+            width: 5vw;
             top: 56%;
             left: 43%;
         }
