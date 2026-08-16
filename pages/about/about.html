@@ -7,20 +7,30 @@
 <style>
 
   @font-face {
-    font-family: "Geist Pixel Circle";
-    src: url("../../assets/GeistPixel-Circle.woff2");
+        font-family: "Geist Pixel Circle";
+        src: url(../../assets/GeistPixel-Circle.woff2);
   }  
 
   @font-face {
-    font-family: "Geist Pixel Square";
-    src: url("../../assets/GeistPixel-Square.woff2");
-  }  
+      font-family: "Geist Pixel Square";
+      src: url(../../assets/GeistPixel-Square.woff2);
+  } 
 
   @font-face {
-    font-family: "Source Serif 4";
-    src: url("../../assets/SourceSerif4.ttf");
-    font-optical-sizing: auto;
-  }  
+      font-family: "Source Serif 4";
+      src: url(../../assets/SourceSerif4.ttf);
+      font-optical-sizing: auto;
+      font-weight: 100 900;
+      font-style: normal;
+  }   
+
+  @font-face {
+      font-family: "Source Serif 4";
+      src: url(../../assets/SourceSerif4-Italic.ttf);
+      font-optical-sizing: auto;
+      font-weight: 100 900;
+      font-style: italic;
+  }   
 
   body {
     width: 100vw;
@@ -28,11 +38,11 @@
     overflow: hidden;
     margin: 0 auto;
     background: #FFF;
-    cursor: url("../assets/cursor.svg") 16 16, default;
+    cursor: url("../../assets/cursor.svg") 16 16, default;
   }
 
   a {
-    cursor: url("../assets/cursorhover.svg") 16 16, pointer;
+    cursor: url("../../assets/cursorhover.svg") 16 16, pointer;
   }
 
 
@@ -57,88 +67,137 @@
     padding-top: 3vh;
   }
 
-  .anchorimage {
-    max-height: 100vh;
-    max-width: 45vw;
-    height: 100vh;
+  .text-left {
     position: absolute;
-    overflow: hidden;
-    right: 0;
-    display: flex;
-    justify-content: center;
-    opacity: .8;
-  }
-
-  .setmenu {
-    font-family: "Geist Pixel Square", serif;
-    font-size: 2rem;
-    color: #000;
-    text-transform: uppercase;
-    line-height: 3.5rem;
-    kerning: optical;
-    position: absolute;
-    overflow: hidden;
-    left: 2vw;
-    bottom: 5vh;
-    text-align: left;
-  }
-
-  .setmenu a {
-    transition: .1s ease-in-out all;
-    color: inherit;
-    text-decoration: none;
-  }
-
-  .setmenu a:hover {
-    transition: .1s ease-in-out all;
-    color: #FF7900;
-    text-decoration: none;
-  }
-
-
-  .projects {
+    left: 5vw;
+    top: 29vh;
+    width: 33vw;
     font-family: "Source Serif 4", serif;
-    font-weight: 50;
-    font-size: 2.8rem;
-    color: #7D7D7D;
-    line-height: 5rem;
+    font-style: italic;
+    font-weight: 100;
+    font-size: 3rem;
+    line-height: 1.5;
     kerning: optical;
+    color: #666;
+  }
+
+  .text-right {
     position: absolute;
-    overflow: hidden;
-    right: 50vw;
-    top: 35vh;
-    text-align: right;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity .4s linear, visibility .4s linear;
+    right: 1vw;
+    top: 50vh;
+    width: 33vw;
+    font-family: "Source Serif 4", serif;
+    font-style: italic;
+    font-weight: 100;
+    font-size: 3rem;
+    line-height: 1.5;
+    kerning: optical;
+    color: #666;
   }
 
-  .projects.is-visible {
-    opacity: 1;
-    visibility: visible;
-  }
-
-  .projects a {
+  .text-right a {
+    color: #FF7900;
+    text-decoration: none;
     transition: .2s ease-in-out all;
+  }
+
+  .text-right a:hover {
+    text-decoration: none;
+  }
+
+  .social-caption {
+    position: absolute;
+    left: 37vw;
+    bottom: 14vh;
+    width: 24vw;
+    text-align: center;
+    font-family: "Source Serif 4", serif;
+    font-weight: 100;
+    font-style: italic;
+    font-size: 1.15rem;
+    color: #FF7900;
+  }
+
+  .social-caption a {
     color: inherit;
     text-decoration: none;
-    list-style: none;
   }
 
-  .projects a:hover {
-    transition: .2s ease-in-out all;
-    font-weight: 50;
-    color: #FF7900;
+  .social-caption a:hover {
+    text-decoration: none;
+  }
+
+  .portrait {
+    position: absolute;
+    left: 38vw;
+    top: 24vh;
+    width: 24vw;
+  }
+
+  .portrait img {
+    width: 100%;
+    height: auto;
+    display: block;
   }
 
   @media (max-width: 900px) {
-    .topbar { font-size: 3.2rem; width: 90vw; padding-left: 6vw; }
+    .topbar {
+      position: static;
+      width: auto;
+      height: auto;
+      font-size: 3.2rem;
+      padding-left: 6vw;
+      padding-top: 4vh;
+      padding-bottom: 2vh;
+    }
     .logo { width: 40px; height: 40px; }
+
+    body { overflow: auto; height: auto; min-height: 100vh; padding: 0 0 8vh; }
+
+    .text-left,
+    .text-right {
+      position: static;
+      width: 82vw;
+      margin: 0 auto 4vh;
+      font-size: 2rem;
+    }
+
+    .portrait {
+      position: static;
+      width: 50vw;
+      margin: 2vh auto 3vh;
+    }
+
+    .portrait img {
+      filter: invert(44%) sepia(66%) saturate(1476%) hue-rotate(1deg) brightness(104%) contrast(104%);
+    }
+
+    .social-caption {
+      position: static;
+      width: 82vw;
+      margin: 0 auto 5vh;
+    }
   }
 
   @media (max-width: 560px) {
-    .topbar { font-size: 2.4rem; width: 92vw; padding-left: 6vw; }
+    .topbar { font-size: 2.2rem; width: 92vw; padding-left: 6vw; }
     .logo { width: 32px; height: 32px; right: 4vw; bottom: 3vh; }
+
+    .text-left,
+    .text-right {
+      width: 86vw;
+      font-size: 1.5rem;
+      line-height: 1.5;
+    }
+
+    .portrait {
+      width: 62vw;
+    }
+
+    .social-caption {
+      width: 86vw;
+      font-size: 1rem;
+    }
   }
 
 </style>
@@ -147,11 +206,19 @@
 
   <div class="topbar">About</div>
 
+  <div class="text-left">I am a photographer and graphic designer from Portugal, currently based in Kyoto, Japan.</div>
+
+  <div class="portrait">
+    <img src="assets/portrait.svg" alt="Line-art self portrait">
+  </div>
+
+  <div class="social-caption"><a href="https://www.instagram.com/kocorono/" target="_blank" rel="noopener">Instagram</a> / <a href="https://bsky.app/profile/hugoanaya.com" target="_blank" rel="noopener">Bluesky</a></div>
+
+  <div class="text-right">I'm currently looking for opportunities in both fields. <br/>If you'd like to work with me, I'd love to <a href="mailto:mail@hugoanaya?subject=Hello!">hear from you</a>.</div>
+
   <div class="logo">
     <a href="../../index.html"><img src="../../assets/logo.svg"></a>
   </div>
-
-  
 
 </body>
 </html>
