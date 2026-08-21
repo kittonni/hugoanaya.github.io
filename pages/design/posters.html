@@ -8,7 +8,7 @@
 <style>
   :root {
     --gap: 16px;
-    --row-height: 8px; /* fine-grained unit; JS computes each item's grid-row span from this */
+    --row-height: 8px;
   }
 
   * { box-sizing: border-box; }
@@ -83,10 +83,6 @@
     display: block;
   }
 
-  /* Pinned elements: NOT touched by the auto-sizing JS.
-     Column position is fixed by design; row position is
-     fixed to sit after roughly two auto-flowed rows. */
-
   .topbar {
     width: 100vw;
     height: 15vh;
@@ -101,11 +97,11 @@
   }
 
   .anchor-image {
-    grid-column: 2 / 3;   /* column 2 = 3rd from right in a 4-col grid */
+    grid-column: 2 / 3;
     grid-row: 21 / 61;
   }
   .copy-block {
-    grid-column: 1 / 3;   /* columns 3–4 = 1st & 2nd from right */
+    grid-column: 1 / 3;
     grid-row: 31 / 41;
     color: #000;
     border-radius: 10px;
@@ -160,7 +156,7 @@
 
 <script>
 (function () {
-  const TARGET_LONG_EDGE = 700; // design-scale px every image's long edge is normalized toward
+  const TARGET_LONG_EDGE = 700;
   const grid = document.getElementById('gallery');
 
   function getColumnCount() {
@@ -183,10 +179,6 @@
       let colSpan, rowSpan;
 
       if (ratio > 1.05) {
-        // landscape: long edge is WIDTH — normalize width to the target,
-        // spans 2+ columns so it reads as clearly horizontal, but never
-        // more columns than the grid actually has (avoids overflow when
-        // mobile collapses to a single column).
         colSpan = Math.round((TARGET_LONG_EDGE + gapPx) / (colWidth + gapPx));
         colSpan = maxColSpan >= 2
           ? Math.max(2, Math.min(maxColSpan, colSpan))
@@ -197,16 +189,12 @@
         rowSpan = Math.max(1, Math.round((renderedHeight + gapPx) / (rowUnit + gapPx)));
 
       } else if (ratio < 0.95) {
-        // portrait: spans 2 columns when available, height derived from
-        // TRUE aspect ratio at the actual rendered width so proportions
-        // are preserved (falls back to 1 column on mobile).
         colSpan = Math.min(2, maxColSpan);
         const renderedWidth = colSpan * colWidth + (colSpan - 1) * gapPx;
         const renderedHeight = renderedWidth / ratio;
         rowSpan = Math.max(1, Math.round((renderedHeight + gapPx) / (rowUnit + gapPx)));
 
       } else {
-        // near-square
         colSpan = 1;
         rowSpan = Math.max(1, Math.round((colWidth + gapPx) / (rowUnit + gapPx)));
       }
