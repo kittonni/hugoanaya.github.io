@@ -28,18 +28,20 @@
     height: 100vh;
     overflow: hidden;
     margin: 0 auto;
-    background: #FFF;
+    background: #F9F9F9;
     cursor: url("../assets/cursor.svg") 5 5, default;
   }
 
   a {
     cursor: url("../assets/cursorhover.svg") 5 5, pointer;
     text-decoration: none;
-    color: #FF7900;
+    color: #A73A3F;
+    transition: .2s ease-in-out all;
   }
   
-  a:visited {
-    color: #FF7900;
+  a:hover {
+    color: inherit;
+    transition: .2s ease-in-out all;
   }
 
 
@@ -52,12 +54,12 @@
     height: 3vh;
   }
 
-  .topbar {
+  .notice {
     width: 50vw;
     height: 15vh;
     position: absolute;
-    background: #fff;
     font-family: "Geist Pixel Circle";
+    color: #2B2B2B;
     font-size: 5rem;
     text-transform: uppercase;
     margin-top: 34vh;
@@ -80,7 +82,7 @@
     <a href="../index.html"><img src="../assets/logo.svg"></a>
   </div>
 
-  <div class="topbar">THE PAGE YOU ARE LOOKING FOR IS NOT HERE. <a href="../index.html">GO BACK</a></div>
+  <div class="notice">THE PAGE YOU ARE LOOKING FOR IS NOT HERE. <a href="../index.html">GO BACK</a></div>
 
 </body>
 </html>
