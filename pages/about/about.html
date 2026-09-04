@@ -1,217 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="icon" type="image/image/svg+xml" href="../../assets/favicon.svg">
-<title>hugo anaya – About</title>
-<style>
-
-  @font-face {
-        font-family: "Geist Pixel Circle";
-        src: url(../../assets/GeistPixel-Circle.woff2);
-  }  
-
-  @font-face {
-      font-family: "Geist Pixel Square";
-      src: url(../../assets/GeistPixel-Square.woff2);
-  } 
-
-  @font-face {
-      font-family: "Source Serif 4";
-      src: url(../../assets/SourceSerif4.ttf);
-      font-optical-sizing: auto;
-      font-weight: 100 900;
-      font-style: normal;
-  }   
-
-  @font-face {
-      font-family: "Source Serif 4";
-      src: url(../../assets/SourceSerif4-Italic.ttf);
-      font-optical-sizing: auto;
-      font-weight: 100 900;
-      font-style: italic;
-  }   
-
-  body {
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
-    margin: 0 auto;
-    background: #FFF;
-    cursor: url("../../assets/cursor.svg") 5 5, default;
-  }
-
-  a {
-    cursor: url("../../assets/cursorhover.svg") 5 5, pointer;
-  }
-
-
-  .logo{
-    position: fixed;
-    z-index: 999;
-    right: 2vw;
-    bottom: 5vh;
-    width: 3vw;
-    height: 3vh;
-  }
-
-  .topbar {
-    width: 70vw;
-    height: 15vh;
-    position: absolute;
-    background: #fff;
-    font-family: "Geist Pixel Circle";
-    font-size: 5rem;
-    text-transform: uppercase;
-    padding-left: 5vw;
-    padding-top: 3vh;
-  }
-
-  .text-left {
-    position: absolute;
-    left: 5vw;
-    top: 29vh;
-    width: 33vw;
-    font-family: "Source Serif 4", serif;
-    font-style: italic;
-    font-weight: 100;
-    font-size: 3rem;
-    line-height: 1.5;
-    kerning: optical;
-    color: #666;
-  }
-
-  .text-right {
-    position: absolute;
-    right: 1vw;
-    top: 50vh;
-    width: 33vw;
-    font-family: "Source Serif 4", serif;
-    font-style: italic;
-    font-weight: 100;
-    font-size: 3rem;
-    line-height: 1.5;
-    kerning: optical;
-    color: #666;
-  }
-
-  .text-right a {
-    color: #FF7900;
-    text-decoration: none;
-    transition: .2s ease-in-out all;
-  }
-
-  .text-right a:hover {
-    text-decoration: none;
-  }
-
-  .social-caption {
-    position: absolute;
-    left: 36.5vw;
-    bottom: 14vh;
-    width: 24vw;
-    text-align: center;
-    font-family: "Geist Pixel Square", serif;
-    font-weight: 100;
-    font-size: 1.15rem;
-    color: #FF7900;
-  }
-
-  .social-caption a {
-    color: inherit;
-    text-decoration: none;
-  }
-
-  .social-caption a:hover {
-    text-decoration: none;
-  }
-
-  .portrait {
-    position: absolute;
-    left: 38vw;
-    top: 24vh;
-    width: 24vw;
-    filter: invert(44%) sepia(66%) saturate(1476%) hue-rotate(1deg) brightness(104%) contrast(104%);
-  }
-
-  .portrait img {
-    width: 100%;
-    height: auto;
-    display: block;
-  }
-
-  @media (max-width: 900px) {
-    .topbar {
-      position: static;
-      width: auto;
-      height: auto;
-      font-size: 3.2rem;
-      padding-left: 6vw;
-      padding-top: 4vh;
-      padding-bottom: 2vh;
-    }
-    .logo { width: 40px; height: 40px; }
-
-    body { overflow: auto; height: auto; min-height: 100vh; padding: 0 0 8vh; }
-
-    .text-left,
-    .text-right {
-      position: static;
-      width: 82vw;
-      margin: 0 auto 4vh;
-      font-size: 2rem;
-    }
-
-    .portrait {
-      position: static;
-      width: 50vw;
-      margin: 2vh auto 3vh;
-    }
-
-    .social-caption {
-      position: static;
-      width: 82vw;
-      margin: 0 auto 5vh;
-    }
-  }
-
-  @media (max-width: 560px) {
-    .topbar { font-size: 2.2rem; width: 92vw; padding-left: 6vw; }
-    .logo { width: 32px; height: 32px; right: 4vw; bottom: 3vh; }
-
-    .text-left,
-    .text-right {
-      width: 86vw;
-      font-size: 1.5rem;
-      line-height: 1.5;
-    }
-
-    .portrait {
-      width: 62vw;
-    }
-
-    .social-caption {
-      width: 86vw;
-      font-size: 1rem;
-    }
-  }
-
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/svg+xml" href="../../assets/favicon.svg">
+  <link rel="stylesheet" href="../../assets/style.css">
+  <title>hugo anaya – About</title>
 </head>
+
 <body>
 
-  <div class="topbar">About</div>
+  <div class="topbarcontent">About</div>
 
   <div class="text-left">I am a photographer and graphic designer from Portugal, currently based in Kyoto, Japan.</div>
+
+  <div class="text-right">I'm currently looking for opportunities in both fields. <br/>If you'd like to work with me, I'd love to <a href="mailto:mail@hugoanaya?subject=Hello!">hear from you</a>.</div>
 
   <div class="portrait">
     <img src="assets/portrait.svg" alt="Line-art self portrait">
   </div>
 
-  <div class="social-caption"><a href="https://www.instagram.com/kocorono/" target="_blank" rel="noopener">Instagram</a> / <a href="https://bsky.app/profile/hugoanaya.com" target="_blank" rel="noopener">Bluesky</a></div>
-
-  <div class="text-right">I'm currently looking for opportunities in both fields. <br/>If you'd like to work with me, I'd love to <a href="mailto:mail@hugoanaya?subject=Hello!">hear from you</a>.</div>
+  <div class="social-caption"><a href="https://www.instagram.com/kocorono/" target="_blank" rel="noopener">  Instagram  </a>&nbsp;&nbsp;<a href="https://bsky.app/profile/hugoanaya.com" target="_blank" rel="noopener">  Bluesky  </a></div>
 
   <div class="logo">
     <a href="../../index.html"><img src="../../assets/logo.svg"></a>

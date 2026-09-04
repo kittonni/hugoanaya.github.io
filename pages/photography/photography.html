@@ -1,158 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="icon" type="image/image/svg+xml" href="../../assets/favicon.svg">
-<title>hugo anaya – Photography</title>
-<style>
-
-  @font-face {
-    font-family: "Geist Pixel Circle";
-    src: url("../../assets/GeistPixel-Circle.woff2");
-  }  
-
-  @font-face {
-    font-family: "Geist Pixel Square";
-    src: url("../../assets/GeistPixel-Square.woff2");
-  }  
-
-  @font-face {
-    font-family: "Source Serif 4";
-    src: url("../../assets/SourceSerif4.ttf");
-    font-optical-sizing: auto;
-  }    
-
-  body {
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
-    margin: 0 auto;
-    background: #FFF;
-    cursor: url("../../assets/cursor.svg") 5 5, default;
-  }
-
-  a {
-    cursor: url("../../assets/cursorhover.svg") 5 5, pointer;
-  }
-
-
-  .logo{
-    position: fixed;
-    z-index: 999;
-    right: 2vw;
-    bottom: 5vh;
-    width: 3vw;
-    height: 3vh;
-  }
-
-  .topbar {
-    width: 70vw;
-    height: 15vh;
-    position: absolute;
-    background: #fff;
-    font-family: "Geist Pixel Circle";
-    font-size: 5rem;
-    text-transform: uppercase;
-    padding-left: 10%;
-    padding-top: 3vh;
-  }
-
-  .anchorimage {
-    max-height: 100vh;
-    max-width: 45vw;
-    height: 100vh;
-    position: absolute;
-    overflow: hidden;
-    right: 0;
-    display: flex;
-    justify-content: center;
-    opacity: .8;
-  }
-
-  .setmenu {
-    font-family: "Geist Pixel Square", serif;
-    font-size: 2rem;
-    color: #000;
-    text-transform: uppercase;
-    line-height: 3.5rem;
-    kerning: optical;
-    position: absolute;
-    overflow: hidden;
-    left: 2vw;
-    bottom: 5vh;
-    text-align: left;
-  }
-
-  .setmenu a {
-    transition: .1s ease-in-out all;
-    color: inherit;
-    text-decoration: none;
-  }
-
-  .setmenu a:hover {
-    transition: .1s ease-in-out all;
-    color: #FF7900;
-    text-decoration: none;
-  }
-
-
-  .projects {
-    font-family: "Source Serif 4", serif;
-    font-weight: 50;
-    font-size: 2.8rem;
-    color: #7D7D7D;
-    line-height: 5rem;
-    kerning: optical;
-    position: absolute;
-    overflow: hidden;
-    right: 50vw;
-    top: 25vh;
-    text-align: right;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity .4s linear, visibility .4s linear;
-  }
-
-  .projects.is-visible {
-    opacity: 1;
-    visibility: visible;
-  }
-
-  .projects a {
-    transition: .2s ease-in-out all;
-    color: inherit;
-    text-decoration: none;
-    list-style: none;
-  }
-
-  .projects a:hover {
-    transition: .2s ease-in-out all;
-    font-weight: 50;
-    color: #FF7900;
-  }
-
-  @media (max-width: 900px) {
-    .topbar { font-size: 3rem; width: 90vw; padding-left: 6vw; }
-    .anchorimage { max-width: 50vw; }
-    .setmenu { font-size: 1.6rem; line-height: 2.6rem; }
-    .projects { font-size: 1.9rem; line-height: 2.9rem; width: 55vw; right: 40vw; top: 22vh; }
-    .logo { width: 40px; height: 40px; }
-  }
-
-  @media (max-width: 560px) {
-    .topbar { font-size: 1.6rem; width: 92vw; height: 20vh; padding-left: 6vw; padding-top: 3vh; line-height: 1.15; }
-    .anchorimage { max-width: 38vw; max-height: 36vh; height: 36vh; opacity: .5; }
-    .logo { width: 32px; height: 32px; right: 4vw; bottom: 3vh; }
-    .setmenu { font-size: 1.3rem; line-height: 2.1rem; left: 5vw; bottom: 4vh; }
-    .projects { font-size: 1.15rem; line-height: 1.9rem; right: 5vw; width: 62vw; top: 20vh; }
-  }
-
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/svg+xml" href="../../assets/favicon.svg">
+  <link rel="stylesheet" href="../../assets/style.css">
+  <script src="../../assets/projectmenu.js" defer></script>
+  <title>hugo anaya – Photography</title>
 </head>
+
 <body>
 
-  <div class="topbar">Photography</div>
+  <div class="topbarindex">Photography</div>
 
   <div class="logo">
     <a href="../../index.html"><img src="../../assets/logo.svg"></a>
@@ -163,12 +23,14 @@
   </div>
 
   <div class="projects" id="projectsMenu">
-    <a href="kyonokyoto.html"><li>kyo no kyoto</li></a>
-    <a href="earlyspring.html"><li>early spring</li></a>
-    <a href="matsuri.html"><li>matsuri</li></a>
-    <a href="mabutanoura.html"><li>mabuta no ura</li></a>
-    <a href="whereyoullfindmenow.html"><li>where you'll find me now</li></a>
-    <a href="tokyolog.html"><li>tokyo log</li></a>
+    <li class="projectslist">
+      <a href="kyonokyoto.html"><li>kyo no kyoto</li></a>
+      <a href="earlyspring.html"><li>early spring</li></a>
+      <a href="matsuri.html"><li>matsuri</li></a>
+      <a href="mabutanoura.html"><li>mabuta no ura</li></a>
+      <a href="whereyoullfindmenow.html"><li>where you'll find me now</li></a>
+      <a href="tokyolog.html"><li>tokyo log</li></a>
+    </li>
   </div>
 
   <div class="setmenu">
@@ -176,12 +38,6 @@
     <a href="commissions.html"><li>commissions</li></a>
     <a href="portraits.html"><li>portraits</li></a>
   </div>
-  <script>
-    document.getElementById('setsToggle').addEventListener('click', function(e) {
-      e.preventDefault();
-      document.getElementById('projectsMenu').classList.toggle('is-visible');
-    });
-  </script>
 
 </body>
 </html>

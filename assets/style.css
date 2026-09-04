@@ -1,0 +1,376 @@
+/** Global styling **/
+
+:root {
+    --menu-size: min(85vw, 900px);
+    --font-size: 8.6vw;
+    --gap: 16px;
+    --row-height: 8px;
+}
+
+* {
+    font-synthesis: none !important;
+    box-sizing: border-box;
+}
+
+/** Font declaration **/
+
+@font-face {
+    font-family: "Geist Pixel Circle";
+    src: url(GeistPixel-Circle.woff2);
+}  
+
+@font-face {
+  font-family: "Geist Pixel Square";
+  src: url(GeistPixel-Square.woff2);
+} 
+
+@font-face {
+  font-family: "Source Serif 4";
+  src: url(SourceSerif4.ttf);
+  font-optical-sizing: auto;
+  font-weight: 100 900;
+  font-style: normal;
+}   
+
+@font-face {
+  font-family: "Source Serif 4";
+  src: url(SourceSerif4-Italic.ttf);
+  font-optical-sizing: auto;
+  font-weight: 100 900;
+  font-style: italic;
+}    
+
+/** Global body styling **/
+
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background: #F9F9F9;
+    cursor: url("cursor.svg") 5 5, default; 
+    overflow: hidden;
+}
+
+a {
+    cursor: url("cursorhover.svg") 5 5, pointer;
+    text-decoration: none;
+    color: #A73A3F;
+    transition: .3s ease-in-out all;
+}
+
+a:hover {
+    color: #C0C090;
+    transition: .3s ease-in-out all;
+}
+
+/** Front page **/
+
+.menu-wrapper {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    z-index: 0;
+}
+
+svg {
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+}
+
+
+.menu-item text {
+    fill: #9C6C54;
+    font-family: "Source Serif 4", serif;
+    font-weight:300;
+    font-size: var(--font-size);
+    font-kerning: normal;
+    letter-spacing: -0.05em;
+}
+
+.menu-hitbox {
+    position: absolute;
+    stroke: 30px #F9F9F9;
+}
+
+.menu-item:hover text {
+    fill: #C0C090;
+}
+
+.nameMain {
+    font-family: "Geist Pixel Square";
+    font-size: 3.8vw;
+    color: #16160E;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    z-index: 20;
+    top: 64%;
+    left: 39%;
+}  
+
+.logoMain {
+    width: 5vw;
+    position: absolute;
+    top: 60%;
+    left: 46.9%;
+}
+
+/** Content index pages **/
+
+.logo {
+    position: fixed;
+    z-index: 999;
+    right: 2vw;
+    bottom: 5vh;
+    width: 3vw;
+    height: 3vh;
+    /**filter: invert(1);
+    mix-blend-mode: difference;**/
+}
+
+.topbarindex {
+    width: 70vw;
+    height: 15vh;
+    position: absolute;
+    font-family: "Geist Pixel Circle";
+    font-size: 5rem;
+    text-transform: uppercase;
+    padding-left: 17vw;
+    padding-top: 3vh;
+}
+
+.anchorimage {
+    max-height: 100vh;
+    max-width: 45vw;
+    height: 100vh;
+    position: absolute;
+    overflow: hidden;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    opacity: .8;
+}
+
+.setmenu {
+    font-family: "Geist Pixel Square", serif;
+    font-size: 2rem;
+    color: #2B2B2B;
+    text-transform: uppercase;
+    line-height: 3.5rem;
+    kerning: optical;
+    position: absolute;
+    overflow: hidden;
+    left: 2vw;
+    bottom: 5vh;
+    text-align: left;
+}
+
+.setmenu a {
+    transition: .1s ease-in-out all;
+    color: inherit;
+    text-decoration: none;
+}
+
+.setmenu a:hover {
+    transition: .1s ease-in-out all;
+    color: #A73A3F;
+    text-decoration: none;
+}
+
+
+.projects {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    font-family: "Source Serif 4", serif;
+    font-weight: 50;
+    font-size: 2.8rem;
+    color: #7D7D7D;
+    line-height: 5rem;
+    kerning: optical;
+    position: absolute;
+    overflow: hidden;
+    right: 50vw;
+    text-align: right;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .4s linear, visibility .4s linear;
+}
+
+.projectslist {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.projects.is-visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.projects a {
+    transition: .2s ease-in-out all;
+    color: inherit;
+    text-decoration: none;
+    list-style: none;
+}
+
+.projects a:hover {
+    transition: .2s ease-in-out all;
+    font-weight: 50;
+    color: #A73A3F;
+}
+
+/** Content pages **/
+
+.masonry-grid {
+    max-width: 95vw;
+    max-height: 100vh;
+    margin: 0 auto;
+    padding: 15vh 0 2vh;
+    display: grid;
+    overflow: scroll;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: var(--row-height);
+    grid-auto-flow: dense;
+    gap: var(--gap);
+    scrollbar-width: none;
+}
+
+.masonry-item {
+    overflow: hidden;
+    position: relative;
+}
+
+.masonry-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.topbarcontent {
+    width: 100vw;
+    height: 15vh;
+    position: absolute;
+    z-index: 1;
+    background: inherit;
+    font-family: "Geist Pixel Circle";
+    font-size: 4rem;
+    text-transform: uppercase;
+    padding-left: 2.2vw;
+    padding-top: 3vh;
+}
+
+.anchor-image {
+    grid-column: 2 / 3;
+    grid-row: 21 / 61;
+}
+
+.copy-block {
+    grid-column: 1 / 3;
+    grid-row: 31 / 41;
+    color: #000;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: right;
+    gap: 12px;
+}
+
+/** About page **/
+
+.text-left {
+    position: absolute;
+    left: 5vw;
+    top: 29vh;
+    width: 33vw;
+    font-family: "Source Serif 4", serif;
+    font-style: italic;
+    font-weight: 100;
+    font-size: 3rem;
+    line-height: 1.5;
+    kerning: optical;
+    color: #666;
+}
+
+.text-right {
+    position: absolute;
+    right: 1vw;
+    top: 50vh;
+    width: 33vw;
+    font-family: "Source Serif 4", serif;
+    font-style: italic;
+    font-weight: 100;
+    font-size: 3rem;
+    line-height: 1.5;
+    kerning: optical;
+    color: #666;
+}
+
+.text-right a {
+    color: #A73A3F;
+    text-decoration: underline;
+    transition: .2s ease-in-out all;
+}
+
+.text-right a:hover {
+    color: #C0C090;
+    text-decoration: underline;
+    transition: .2s ease-in-out all;
+}
+
+.social-caption {
+    position: absolute;
+    left: 36.5vw;
+    bottom: 14vh;
+    width: 24vw;
+    text-align: center;
+    font-family: "Geist Pixel Square", serif;
+    font-weight: 100;
+    font-size: 1.15rem;
+}
+
+.social-caption a {
+    color: #A73A3F;
+    text-decoration: none;
+    transition: .2s ease-in-out all;
+}
+
+.social-caption a:hover {
+    color: #C0C090;
+    text-decoration: none;
+    transition: .2s ease-in-out all;
+}
+
+.portrait {
+    position: absolute;
+    left: 38vw;
+    top: 24vh;
+    width: 24vw;
+    filter: invert(15%) sepia(7%) saturate(3923%) hue-rotate(319deg) brightness(97%) contrast(83%);
+}
+
+.portrait img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/** 404 page **/
+
+.notice {
+    width: 50vw;
+    height: 15vh;
+    position: absolute;
+    font-family: "Geist Pixel Circle";
+    color: inherit;
+    font-size: 5rem;
+    text-transform: uppercase;
+    margin-top: 34vh;
+    margin-left: 27vw;
+}

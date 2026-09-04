@@ -4,133 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/image/svg+xml" href="assets/favicon.svg">
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    <link rel="stylesheet" href="assets/style.css">
+    <script type="text/javascript" src="assets/anime.umd.min.js" defer></script>
+    <script type="text/javascript" src="assets/mainmenu.js" defer></script>
     <title>hugo anaya - photographer & designer</title>
-
-<style>
-    * {
-        font-synthesis: none !important;
-    }
-
-    @font-face {
-        font-family: "Geist Pixel Circle";
-        src: url(assets/GeistPixel-Circle.woff2);
-    }  
-
-    @font-face {
-        font-family: "Geist Pixel Square";
-        src: url(assets/GeistPixel-Square.woff2);
-    } 
-
-    @font-face {
-        font-family: "Source Serif 4";
-        src: url(assets/SourceSerif4.ttf);
-        font-optical-sizing: auto;
-    }  
-
-    :root {
-        --menu-size: min(85vw, 900px);
-        --font-size: 8.6vw;
-    }
-
-    /** * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    } **/
-
-    body {
-        width: 100vw;
-        height: 100vh;
-        overflow: hidden;
-        background: #FFFFFF;
-        cursor: url("assets/cursor.svg") 5 5, default; 
-    }
-
-    a {
-        cursor: url("assets/cursorhover.svg") 5 5, pointer;
-    }
-
-    .menu-wrapper {
-        position: absolute;
-        width: 100vw;
-        height: 100vh;
-        z-index: 0;
-    }
-
-    svg {
-        width: 100%;
-        height: 100%;
-        overflow: visible;
-    }
-
-
-    .menu-item text {
-        fill: #000;
-        font-family: "Source Serif 4", serif;
-        font-weight:300;
-        font-size: var(--font-size);
-        font-kerning: normal;
-        letter-spacing: -0.05em;
-    }
-
-    .menu-hitbox {
-        position: absolute;
-        stroke: 30px #fff;
-    }
-
-    .menu-item:hover text {
-        fill: #FF7900;
-    }
-
-    .nameMain {
-        font-family: "Geist Pixel Square";
-        font-size: 3.8vw;
-        color: #000;
-        position: absolute;
-        justify-content: center;
-        align-items: center;
-        z-index: 20;
-        top: 64%;
-        left: 38.8%;
-    }  
-
-    .logoMain {
-        width: 5vw;
-        position: absolute;
-        top: 60%;
-        left: 46.9%;
-    }
-
-    @media (max-width: 900px) {
-        
-        .nameMain {
-            font-size: var(--font-size);
-            top: 62%;
-            left: 33%;
-        }
-        .logoMain {
-            width: 28px;
-            top: 58%;
-            left: 44%;
-        }
-    }
-
-    @media (max-width: 560px) {
-        
-        .nameMain {
-            font-size: var(--font-size);
-            top: 60%;
-            left: 28%;
-        }
-        .logoMain {
-            width: 5vw;
-            top: 56%;
-            left: 43%;
-        }
-    }
-</style>
-
 </head>
 
 
@@ -142,11 +20,9 @@
     <div class="menu-wrapper">
 
         <svg viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
-
             <defs>
 
                 <!-- Large circle positioned below viewport -->
-
                 <path id="menuPath" d="
                             M 960 1320
                             m -950 0
@@ -164,9 +40,7 @@
                         </textPath>
                     </text>
                 </a>
-                </path>
             </g>
-
             <g class="menu-item">
                 <a href="pages/design/design.html">
                     <text>
@@ -176,7 +50,6 @@
                     </text>
                 </a>
             </g>
-
             <g class="menu-item">
                 <a href="pages/404.html">
                     <text>
@@ -186,7 +59,6 @@
                     </text>
                 </a>
             </g>
-
             <g class="menu-item">
                 <a href="pages/about/about.html">
                     <text>
@@ -196,108 +68,8 @@
                     </text>
                 </a>
             </g>
-
         </svg>
-
     </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js"></script>
-
-    <script>
-        const textPaths = document.querySelectorAll('textPath');
-
-            let position = 0;
-            let velocity = 0;
-
-            const MIN_POSITION = -17;
-            const MAX_POSITION = 17;
-
-            // Mouse wheel / trackpad
-            window.addEventListener('wheel', (e) => {
-
-                e.preventDefault();
-
-                velocity += e.deltaY * 0.0018;
-
-            }, { passive: false });
-
-            // Touch (mobile / tablet) — swipe to rotate the menu
-            let touchY = null;
-
-            window.addEventListener('touchstart', (e) => {
-
-                touchY = e.touches[0].clientY;
-
-            }, { passive: true });
-
-            window.addEventListener('touchmove', (e) => {
-
-                if (touchY === null) return;
-
-                const currentY = e.touches[0].clientY;
-                const deltaY = touchY - currentY;
-
-                velocity += deltaY * 0.045;
-                touchY = currentY;
-
-            }, { passive: true });
-
-            window.addEventListener('touchend', () => {
-
-                touchY = null;
-
-            }, { passive: true });
-
-
-            function animate() {
-
-                // Move
-                position += velocity;
-
-                // Friction / inertia
-                velocity *= 0.92 ;
-
-
-                // Hard limits
-                if (position < MIN_POSITION) {
-
-                    position = MIN_POSITION;
-
-                    if (velocity < 0) {
-                        velocity = 0;
-                    }
-
-                }
-
-                if (position > MAX_POSITION) {
-
-                    position = MAX_POSITION;
-
-                    if (velocity > 0) {
-                        velocity = 0;
-                    }
-
-                }
-
-                // Update menu items
-                textPaths.forEach(path => {
-
-                    const base =
-                        Number(path.dataset.base);
-
-                    path.setAttribute(
-                        'startOffset',
-                        `${base + position}%`
-                    );
-
-                });
-
-                requestAnimationFrame(animate);
-            }
-
-            animate();
-    </script>
-
 </body>
-
 </html>
